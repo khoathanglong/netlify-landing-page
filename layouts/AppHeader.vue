@@ -3,7 +3,7 @@
     <base-nav class="navbar-main" transparent type="" effect="light" expand>
       <nuxt-link slot="brand" class="navbar-brand mr-lg-5" to="/">
         <img
-          :src="logo()"
+          src="kodin-white.png"
           alt="logo"
           :style="{ width: '50px', height: '50px' }"
         />
@@ -34,18 +34,18 @@
             <i class="fa fa-info-circle d-lg-none"></i>
             <span class="nav-link-inner--text">About KODIN</span>
           </a>
-          <nuxt-link to="/" class="dropdown-item">
+          <a href="#solutions" class="dropdown-item">
             <i class="ni ni-bulb-61"></i>
             Solutions
-          </nuxt-link>
-          <nuxt-link to="/" class="dropdown-item">
-            <i class="fa fa-cubes"></i>
-            Technology
-          </nuxt-link>
-          <nuxt-link to="/" class="dropdown-item">
+          </a>
+          <a href="#team" class="dropdown-item">
             <i class="fa fa-users"></i>
             Team
-          </nuxt-link>
+          </a>
+          <a href="#contact" class="dropdown-item">
+            <i class="fa fa-envelope"></i>
+            Contact
+          </a>
         </base-dropdown>
 
         <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
@@ -143,12 +143,7 @@
           </a>
         </li>
         <li class="nav-item d-none d-lg-block ml-lg-4">
-          <a
-            href=""
-            target="_blank"
-            rel="noopener"
-            class="btn btn-neutral btn-icon"
-          >
+          <a href="#contact" rel="noopener" class="btn btn-neutral btn-icon">
             <span class="btn-inner--icon">
               <i class="fa fa-envelope mr-2"></i>
             </span>
@@ -163,19 +158,12 @@
 import BaseNav from '@/components/BaseNav'
 import BaseDropdown from '@/components/BaseDropdown'
 import CloseButton from '@/components/CloseButton'
-import whiteLogo from '@/static/logo_kodin_final-09.png'
 
 export default {
   components: {
     BaseNav,
     CloseButton,
     BaseDropdown
-  },
-
-  methods: {
-    logo() {
-      return whiteLogo
-    }
   }
 }
 </script>
