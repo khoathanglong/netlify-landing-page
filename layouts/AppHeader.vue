@@ -1,16 +1,20 @@
 <template>
   <header class="header-global">
     <base-nav class="navbar-main" transparent type="" effect="light" expand>
-      <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-        <img src="img/brand/white.png" alt="logo" />
-      </router-link>
+      <nuxt-link slot="brand" class="navbar-brand mr-lg-5" to="/">
+        <img
+          :src="logo()"
+          alt="logo"
+          :style="{ width: '50px', height: '50px' }"
+        />
+      </nuxt-link>
 
       <div class="row" slot="content-header" slot-scope="{ closeMenu }">
         <div class="col-6 collapse-brand">
           <a
             href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
           >
-            <img src="img/brand/blue.png" />
+            <img src="" />
           </a>
         </div>
         <div class="col-6 collapse-close">
@@ -19,6 +23,31 @@
       </div>
 
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+        <base-dropdown tag="li" class="nav-item">
+          <a
+            slot="title"
+            href="#"
+            class="nav-link"
+            data-toggle="dropdown"
+            role="button"
+          >
+            <i class="fa fa-info-circle d-lg-none"></i>
+            <span class="nav-link-inner--text">About KODIN</span>
+          </a>
+          <nuxt-link to="/" class="dropdown-item">
+            <i class="ni ni-bulb-61"></i>
+            Solutions
+          </nuxt-link>
+          <nuxt-link to="/" class="dropdown-item">
+            <i class="fa fa-cubes"></i>
+            Technology
+          </nuxt-link>
+          <nuxt-link to="/" class="dropdown-item">
+            <i class="fa fa-users"></i>
+            Team
+          </nuxt-link>
+        </base-dropdown>
+
         <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
           <a
             slot="title"
@@ -27,8 +56,8 @@
             data-toggle="dropdown"
             role="button"
           >
-            <i class="ni ni-ui-04 d-lg-none"></i>
-            <span class="nav-link-inner--text">Components</span>
+            <i class="fa fa-trophy d-lg-none"></i>
+            <span class="nav-link-inner--text">Case studies</span>
           </a>
           <div class="dropdown-menu-inner">
             <a
@@ -67,30 +96,17 @@
             </a>
           </div>
         </base-dropdown>
-        <base-dropdown tag="li" class="nav-item">
-          <a
-            slot="title"
-            href="#"
-            class="nav-link"
-            data-toggle="dropdown"
-            role="button"
-          >
-            <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text">Examples</span>
-          </a>
-          <router-link to="/landing" class="dropdown-item">Landing</router-link>
-          <router-link to="/profile" class="dropdown-item">Profile</router-link>
-          <router-link to="/login" class="dropdown-item">Login</router-link>
-          <router-link to="/register" class="dropdown-item"
-            >Register</router-link
-          >
-        </base-dropdown>
+
+        <a slot="title" href="#" class="nav-link">
+          <i class="fa fa-bookmark d-lg-none"></i>
+          <span class="nav-link-inner--text">Blog</span>
+        </a>
       </ul>
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
         <li class="nav-item">
           <a
             class="nav-link nav-link-icon"
-            href="https://www.facebook.com/creativetim"
+            href="https://www.facebook.com/kodin.solutions"
             target="_blank"
             rel="noopener"
             data-toggle="tooltip"
@@ -103,20 +119,20 @@
         <li class="nav-item">
           <a
             class="nav-link nav-link-icon"
-            href="https://www.instagram.com/creativetimofficial"
+            href="https://www.linkedin.com/company/kodin-solutions"
             target="_blank"
             rel="noopener"
             data-toggle="tooltip"
-            title="Follow us on Instagram"
+            title="Follow us on LinkedIn"
           >
-            <i class="fa fa-instagram"></i>
-            <span class="nav-link-inner--text d-lg-none">Instagram</span>
+            <i class="fa fa-linkedin"></i>
+            <span class="nav-link-inner--text d-lg-none">LinkedIn</span>
           </a>
         </li>
         <li class="nav-item">
           <a
             class="nav-link nav-link-icon"
-            href="https://twitter.com/creativetim"
+            href="https://twitter.com/kodin_solutions"
             target="_blank"
             rel="noopener"
             data-toggle="tooltip"
@@ -126,30 +142,17 @@
             <span class="nav-link-inner--text d-lg-none">Twitter</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a
-            class="nav-link nav-link-icon"
-            href="https://github.com/creativetimofficial/vue-argon-design-system"
-            target="_blank"
-            rel="noopener"
-            data-toggle="tooltip"
-            title="Star us on Github"
-          >
-            <i class="fa fa-github"></i>
-            <span class="nav-link-inner--text d-lg-none">Github</span>
-          </a>
-        </li>
         <li class="nav-item d-none d-lg-block ml-lg-4">
           <a
-            href="https://www.creative-tim.com/product/vue-argon-design-system"
+            href=""
             target="_blank"
             rel="noopener"
             class="btn btn-neutral btn-icon"
           >
             <span class="btn-inner--icon">
-              <i class="fa fa-cloud-download mr-2"></i>
+              <i class="fa fa-envelope mr-2"></i>
             </span>
-            <span class="nav-link-inner--text">Download</span>
+            <span class="nav-link-inner--text">Contact us</span>
           </a>
         </li>
       </ul>
@@ -160,12 +163,19 @@
 import BaseNav from '@/components/BaseNav'
 import BaseDropdown from '@/components/BaseDropdown'
 import CloseButton from '@/components/CloseButton'
+import whiteLogo from '@/static/logo_kodin_final-09.png'
 
 export default {
   components: {
     BaseNav,
     CloseButton,
     BaseDropdown
+  },
+
+  methods: {
+    logo() {
+      return whiteLogo
+    }
   }
 }
 </script>
