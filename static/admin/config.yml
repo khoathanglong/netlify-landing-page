@@ -18,7 +18,7 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Icon', name: 'icon', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'case study'
     label: 'Case study'
@@ -32,4 +32,4 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Icon', name: 'icon', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
