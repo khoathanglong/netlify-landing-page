@@ -164,6 +164,15 @@ export default {
     BaseNav,
     CloseButton,
     BaseDropdown
+  },
+
+  computed: {
+    blogList() {
+      return this.$store.state.blogList
+    },
+    caseStudyList() {
+      return this.$store.state.caseStudyList
+    }
   }
 }
 </script>
