@@ -32,7 +32,7 @@
                     tag="a"
                     href="#contact"
                     class="mb-3 mb-sm-0"
-                    type="info"
+                    type="warning"
                     icon="fa fa-envelope"
                   >
                     Contact us
@@ -161,10 +161,10 @@
               ></icon>
               <h3>Web Applications</h3>
               <p>
-                We make sure your end users enjoy unique and delightful
-                experience digging through your websites / web applications. Our
-                solutions tailor to your business requirements, and not limited
-                to:
+                We make sure your end-users enjoy unique and delightful
+                experience digging through your websites and/or web
+                applications. Our solutions tailor to your business
+                requirements, and not limited to:
               </p>
               <ul class="list-unstyled mt-5">
                 <li class="py-2">
@@ -232,7 +232,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="pl-md-5">
+            <div class="pl-md-5 text-success">
               <icon
                 name="fa fa-mobile"
                 class="mb-5"
@@ -242,7 +242,7 @@
                 rounded
               ></icon>
 
-              <h3>Mobile Applications</h3>
+              <h3 class="text-success">Mobile Applications</h3>
               <p>
                 Having a modern, user-friendly mobile application is the key to
                 your business growth. With our experience in creating
@@ -290,7 +290,7 @@
                 ></icon>
               </div>
               <div class="pl-4">
-                <h4 class="display-3 text-white">MVP Development</h4>
+                <h3 class="text-white">MVP Development</h3>
                 <p class="text-white">
                   Have a brilliant idea but don't know where to start? We got
                   you covered! Our MVP Development solution will assist you
@@ -375,7 +375,8 @@
                 <div class="mt-3">
                   <base-button
                     tag="a"
-                    href="#"
+                    href="https://www.linkedin.com/in/ngocnn/"
+                    target="_blank"
                     type="primary"
                     icon="fa fa-linkedin"
                     rounded
@@ -383,7 +384,8 @@
                   ></base-button>
                   <base-button
                     tag="a"
-                    href="#"
+                    href="https://www.facebook.com/ngocnn1104"
+                    target="_blank"
                     type="primary"
                     icon="fa fa-facebook"
                     rounded
@@ -391,7 +393,8 @@
                   ></base-button>
                   <base-button
                     tag="a"
-                    href="#"
+                    href="https://github.com/ngocnn1104"
+                    target="_blank"
                     type="primary"
                     icon="fa fa-github"
                     rounded
@@ -418,7 +421,8 @@
                 <div class="mt-3">
                   <base-button
                     tag="a"
-                    href="#"
+                    href="https://www.linkedin.com/in/longkhoa91/"
+                    target="_blank"
                     type="success"
                     icon="fa fa-linkedin"
                     rounded
@@ -426,7 +430,8 @@
                   ></base-button>
                   <base-button
                     tag="a"
-                    href="#"
+                    href="https://www.facebook.com/thanglongkhoa"
+                    target="_blank"
                     type="success"
                     icon="fa fa-facebook"
                     rounded
@@ -434,7 +439,7 @@
                   ></base-button>
                   <base-button
                     tag="a"
-                    href="#"
+                    href="https://github.com/khoathanglong"
                     type="success"
                     icon="fa fa-github"
                     rounded
@@ -461,7 +466,8 @@
                 <div class="mt-3">
                   <base-button
                     tag="a"
-                    href="#"
+                    href="https://www.linkedin.com/in/thinh-nguyen-van-73061534/"
+                    target="_blank"
                     type="warning"
                     icon="fa fa-linkedin"
                     rounded
@@ -469,7 +475,8 @@
                   ></base-button>
                   <base-button
                     tag="a"
-                    href="#"
+                    href="https://www.facebook.com/nguyenvan.thinh3"
+                    target="_blank"
                     type="warning"
                     icon="fa fa-facebook"
                     rounded
@@ -477,7 +484,8 @@
                   ></base-button>
                   <base-button
                     tag="a"
-                    href="#"
+                    href="https://github.com/nguyenvanthinhhcm"
+                    target="_blank"
                     type="warning"
                     icon="fa fa-github"
                     rounded
@@ -516,7 +524,7 @@
               gradient="white"
               shadow
               round
-              color="primary"
+              color="default"
             ></icon>
             <h5 class="text-white mt-3">Modern technology</h5>
             <p class="text-white mt-3">
@@ -531,7 +539,7 @@
               gradient="white"
               shadow
               round
-              color="primary"
+              color="default"
             ></icon>
             <h5 class="text-white mt-3">Tailor-made solutions</h5>
             <p class="text-white mt-3">
@@ -546,7 +554,7 @@
               gradient="white"
               shadow
               round
-              color="primary"
+              color="default"
             ></icon>
             <h5 class="text-white mt-3">On-site support</h5>
             <p class="text-white mt-3">
@@ -565,7 +573,8 @@
             <card gradient="secondary" shadow body-classes="p-lg-5">
               <h4 class="mb-1">Like what you see?</h4>
               <p class="mt-0">
-                Drop us a message for partnership possibilities.
+                Drop us a message for partnership possibilities and we will
+                reply within 24 hours.
               </p>
               <base-input
                 class="mt-5"
