@@ -6,54 +6,19 @@
         <div class="col-md-6">
           <div class="copyright">
             &copy; {{ year }}
-            <a
-              href="https://www.creative-tim.com"
-              target="_blank"
-              rel="noopener"
-              >Creative Tim</a
-            >
-            &
-            <a href="https://www.binarcode.com" target="_blank" rel="noopener"
-              >Binar Code</a
-            >
+            KODIN
           </div>
         </div>
         <div class="col-md-6">
           <ul class="nav nav-footer justify-content-end">
             <li class="nav-item">
-              <a
-                href="https://www.creative-tim.com"
-                class="nav-link"
-                target="_blank"
-                rel="noopener"
-                >Creative Tim</a
+              <nuxt-link to="/" class="nav-link" rel="noopener"
+                >About Us</nuxt-link
               >
             </li>
             <li class="nav-item">
-              <a
-                href="https://www.creative-tim.com/presentation"
-                class="nav-link"
-                target="_blank"
-                rel="noopener"
-                >About Us</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="http://blog.creative-tim.com"
-                class="nav-link"
-                target="_blank"
-                rel="noopener"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md"
-                class="nav-link"
-                target="_blank"
-                rel="noopener"
-                >MIT License</a
+              <nuxt-link to="/blog" class="nav-link" rel="noopener"
+                >Blog</nuxt-link
               >
             </li>
           </ul>

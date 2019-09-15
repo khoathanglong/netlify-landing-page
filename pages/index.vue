@@ -30,7 +30,7 @@
                 <div class="btn-wrapper">
                   <base-button
                     tag="a"
-                    href=""
+                    href="#contact"
                     class="mb-3 mb-sm-0"
                     type="info"
                     icon="fa fa-envelope"
@@ -39,7 +39,7 @@
                   </base-button>
                   <base-button
                     tag="a"
-                    href=""
+                    href="#solutions"
                     class="mb-3 mb-sm-0"
                     type="white"
                     icon="ni ni-bulb-61"
@@ -48,13 +48,20 @@
                   </base-button>
                 </div>
               </div>
+              <div class="col-lg-6">
+                <img
+                  src="img/software-development.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- 1st Hero Variation -->
     </div>
-    <section class="section section-lg pt-lg-0 mt--200">
+    <section id="solutions" class="section section-lg pt-lg-0 mt--200">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12">
@@ -140,7 +147,7 @@
       <div class="container">
         <div class="row row-grid align-items-center">
           <div class="col-md-6 order-md-2">
-            <img src="img/theme/promo-1.png" class="img-fluid floating" />
+            <img src="img/web-applications.jpg" class="img-fluid floating" />
           </div>
           <div class="col-md-6 order-md-1">
             <div class="pr-md-5">
@@ -217,29 +224,11 @@
       <div class="container">
         <div class="row row-grid align-items-center">
           <div class="col-md-6">
-            <div class="card bg-default shadow border-0">
+            <div class="border-0">
               <img
-                v-lazy="'img/theme/img-1-1200x1000.jpg'"
-                class="card-img-top"
+                v-lazy="'img/mobile-applications.png'"
+                class="img-fluid floating"
               />
-              <blockquote class="card-blockquote">
-                <svg
-                  preserveAspectRatio="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 583 95"
-                  class="svg-bg"
-                >
-                  <polygon
-                    points="0,52 583,95 0,95"
-                    class="fill-default"
-                  ></polygon>
-                  <polygon
-                    points="0,42 583,95 683,0 0,95"
-                    opacity=".2"
-                    class="fill-default"
-                  ></polygon>
-                </svg>
-              </blockquote>
             </div>
           </div>
           <div class="col-md-6">
@@ -281,7 +270,11 @@
         <div class="row row-grid align-items-center">
           <div class="col-md-6 order-lg-2 ml-lg-auto">
             <div class="position-relative pl-md-5">
-              <img src="img/ill/ill-2.svg" class="img-center img-fluid" />
+              <img
+                src="img/prototyping.png"
+                class="img-center img-fluid floating"
+                :style="{ 'max-width': '400px' }"
+              />
             </div>
           </div>
           <div class="col-lg-6 order-lg-1">
@@ -353,78 +346,38 @@
         </div>
       </div>
     </section>
-    <section class="section section-lg">
+    <section id="team" class="section section-lg">
       <div class="container">
         <div class="row justify-content-center text-center mb-lg">
           <div class="col-lg-8">
             <h2 class="display-3">KODIN Team</h2>
             <p class="lead text-muted">
-              According to the National Oceanic and Atmospheric Administration,
-              Ted, Scambos, NSIDClead scentist, puts the potentially record
-              maximum.
+              We are a team of young and passionate people who are inspired by
+              the potentials technology brings to the world.
             </p>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
             <div class="px-4">
               <img
-                v-lazy="'img/theme/team-1-800x800.jpg'"
+                v-lazy="'img/ngoc.jpeg'"
                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                 style="width: 200px;"
               />
               <div class="pt-4 text-center">
                 <h5 class="title">
-                  <span class="d-block mb-1">Ryan Tompson</span>
-                  <small class="h6 text-muted">Web Developer</small>
-                </h5>
-                <div class="mt-3">
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="warning"
-                    icon="fa fa-twitter"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="warning"
-                    icon="fa fa-facebook"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="warning"
-                    icon="fa fa-dribbble"
-                    rounded
-                    icon-only
-                  ></base-button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <div class="px-4">
-              <img
-                v-lazy="'img/theme/team-2-800x800.jpg'"
-                class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                style="width: 200px;"
-              />
-              <div class="pt-4 text-center">
-                <h5 class="title">
-                  <span class="d-block mb-1">Romina Hadid</span>
-                  <small class="h6 text-muted">Marketing Strategist</small>
+                  <span class="d-block mb-1">Ngoc Nguyen</span>
+                  <small class="h6 text-muted"
+                    >Founder and Frontend Developer</small
+                  >
                 </h5>
                 <div class="mt-3">
                   <base-button
                     tag="a"
                     href="#"
                     type="primary"
-                    icon="fa fa-twitter"
+                    icon="fa fa-linkedin"
                     rounded
                     icon-only
                   ></base-button>
@@ -440,7 +393,7 @@
                     tag="a"
                     href="#"
                     type="primary"
-                    icon="fa fa-dribbble"
+                    icon="fa fa-github"
                     rounded
                     icon-only
                   ></base-button>
@@ -448,65 +401,26 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
             <div class="px-4">
               <img
-                v-lazy="'img/theme/team-3-800x800.jpg'"
+                v-lazy="'img/long.jpeg'"
                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                 style="width: 200px;"
               />
               <div class="pt-4 text-center">
                 <h5 class="title">
-                  <span class="d-block mb-1">Alexander Smith</span>
-                  <small class="h6 text-muted">UI/UX Designer</small>
-                </h5>
-                <div class="mt-3">
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="info"
-                    icon="fa fa-twitter"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="info"
-                    icon="fa fa-facebook"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="info"
-                    icon="fa fa-dribbble"
-                    rounded
-                    icon-only
-                  ></base-button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <div class="px-4">
-              <img
-                v-lazy="'img/theme/team-4-800x800.jpg'"
-                class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                style="width: 200px;"
-              />
-              <div class="pt-4 text-center">
-                <h5 class="title">
-                  <span class="d-block mb-1">John Doe</span>
-                  <small class="h6 text-muted">Founder and CEO</small>
+                  <span class="d-block mb-1">Long Khoa</span>
+                  <small class="h6 text-muted"
+                    >Co-founder and Software Developer</small
+                  >
                 </h5>
                 <div class="mt-3">
                   <base-button
                     tag="a"
                     href="#"
                     type="success"
-                    icon="fa fa-twitter"
+                    icon="fa fa-linkedin"
                     rounded
                     icon-only
                   ></base-button>
@@ -522,7 +436,50 @@
                     tag="a"
                     href="#"
                     type="success"
-                    icon="fa fa-dribbble"
+                    icon="fa fa-github"
+                    rounded
+                    icon-only
+                  ></base-button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img
+                v-lazy="'img/thinh.jpg'"
+                class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                style="width: 200px;"
+              />
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Thinh Nguyen</span>
+                  <small class="h6 text-muted"
+                    >Co-founder and Test Engineer</small
+                  >
+                </h5>
+                <div class="mt-3">
+                  <base-button
+                    tag="a"
+                    href="#"
+                    type="warning"
+                    icon="fa fa-linkedin"
+                    rounded
+                    icon-only
+                  ></base-button>
+                  <base-button
+                    tag="a"
+                    href="#"
+                    type="warning"
+                    icon="fa fa-facebook"
+                    rounded
+                    icon-only
+                  ></base-button>
+                  <base-button
+                    tag="a"
+                    href="#"
+                    type="warning"
+                    icon="fa fa-github"
                     rounded
                     icon-only
                   ></base-button>
@@ -543,12 +500,12 @@
       <div class="container pt-lg pb-300">
         <div class="row text-center justify-content-center">
           <div class="col-lg-10">
-            <h2 class="display-3 text-white">Build something</h2>
-            <p class="lead text-white">
+            <h2 class="display-3 text-white">Why KODIN?</h2>
+            <!-- <p class="lead text-white">
               According to the National Oceanic and Atmospheric Administration,
               Ted, Scambos, NSIDClead scentist, puts the potentially record low
               maximum sea ice extent tihs year down to low ice.
-            </p>
+            </p> -->
           </div>
         </div>
         <div class="row row-grid mt-5">
@@ -561,57 +518,60 @@
               round
               color="primary"
             ></icon>
-            <h5 class="text-white mt-3">Building tools</h5>
+            <h5 class="text-white mt-3">Modern technology</h5>
             <p class="text-white mt-3">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              We always update with the most stable and popular technology to
+              deliver maintainable products.
             </p>
           </div>
           <div class="col-lg-4">
             <icon
-              name="ni ni-ruler-pencil"
+              name="fa fa-flask"
               size="lg"
               gradient="white"
               shadow
               round
               color="primary"
             ></icon>
-            <h5 class="text-white mt-3">Grow your market</h5>
+            <h5 class="text-white mt-3">Tailor-made solutions</h5>
             <p class="text-white mt-3">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Not all applications look and function the same way. We take into
+              account your specific requirements.
             </p>
           </div>
           <div class="col-lg-4">
             <icon
-              name="ni ni-atom"
+              name="fa fa-street-view"
               size="lg"
               gradient="white"
               shadow
               round
               color="primary"
             ></icon>
-            <h5 class="text-white mt-3">Launch time</h5>
+            <h5 class="text-white mt-3">On-site support</h5>
             <p class="text-white mt-3">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              We don't believe in long-distance relationships. That's why being
+              physically present at your premises during development is a
+              priority to us.
             </p>
           </div>
         </div>
       </div>
     </section>
-    <section class="section section-lg pt-lg-0 section-contact-us">
+    <section id="contact" class="section section-lg pt-lg-0 section-contact-us">
       <div class="container">
         <div class="row justify-content-center mt--300">
           <div class="col-lg-8">
             <card gradient="secondary" shadow body-classes="p-lg-5">
-              <h4 class="mb-1">Want to work with us?</h4>
-              <p class="mt-0">Your project is very important to us.</p>
+              <h4 class="mb-1">Like what you see?</h4>
+              <p class="mt-0">
+                Drop us a message for partnership possibilities.
+              </p>
               <base-input
                 class="mt-5"
                 alternative
                 placeholder="Your name"
-                addon-left-icon="ni ni-user-run"
+                addon-left-icon="fa fa-user"
               >
               </base-input>
               <base-input
@@ -657,5 +617,9 @@ export default {
 <style lang="scss">
 .icon .fa-mobile {
   font-size: 2rem !important;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>
