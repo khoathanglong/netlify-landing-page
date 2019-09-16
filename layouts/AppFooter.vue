@@ -8,6 +8,10 @@
             &copy; {{ year }}
             KODIN
           </div>
+          <div class="credits">
+            Illustrations by
+            <a href="http://www.freepik.com" target="_blank">Freepik</a>
+          </div>
         </div>
         <div class="col-md-6">
           <ul class="nav nav-footer justify-content-end">
