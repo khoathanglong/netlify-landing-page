@@ -59,9 +59,14 @@
             <i class="fa fa-trophy d-lg-none"></i>
             <span class="nav-link-inner--text">Case studies</span>
           </a>
-          <div class="dropdown-menu-inner">
+          <div
+            class="dropdown-menu-inner"
+            v-for="blog in blogList"
+            :key="blog.title"
+          >
+            {{ blog }}
             <a
-              href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
+              :href="`blog/${blog.title}`"
               class="media d-flex align-items-center"
             >
               <div
@@ -70,14 +75,13 @@
                 <i class="ni ni-spaceship"></i>
               </div>
               <div class="media-body ml-3">
-                <h6 class="heading text-primary mb-md-1">Getting started</h6>
+                <h6 class="heading text-primary mb-md-1">{{ blog.title }}</h6>
                 <p class="description d-none d-md-inline-block mb-0">
-                  Get started with Bootstrap, the world's most popular framework
-                  for building responsive sites.
+                  {{ blog.description }}
                 </p>
               </div>
             </a>
-            <a
+            <!-- <a
               href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
               class="media d-flex align-items-center"
             >
@@ -93,7 +97,7 @@
                   more.
                 </p>
               </div>
-            </a>
+            </a> -->
           </div>
         </base-dropdown>
 
@@ -165,7 +169,24 @@ export default {
     CloseButton,
     BaseDropdown
   },
-
+  async asyncData({ params, payload }) {
+    const files = await require.context(
+      '~/assets/content/blog/',
+      false,
+      /\.json$/
+    )
+    const blogPosts = files.keys().map((key) => {
+      const res = files(key)
+      res.slug = key.slice(2, -5)
+      return res
+    })
+    const blogList = []
+    for (let i; i < blogPosts.length; i++) {
+      const blog = await require(`~/assets/content/blogList/${blogPosts[i]}.json`)
+      blogList.push(blog)
+    }
+    return { blogList }
+  },
   computed: {
     blogList() {
       return this.$store.state.blogList
