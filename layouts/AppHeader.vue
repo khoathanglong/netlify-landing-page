@@ -174,14 +174,6 @@ export default {
     }
     return { blogList, caseStudyList }
   },
-  computed: {
-    blogList() {
-      return this.$store.state.blogList
-    },
-    caseStudyList() {
-      return this.$store.state.caseStudyList
-    }
-  }
 }
 </script>
 <style></style>
