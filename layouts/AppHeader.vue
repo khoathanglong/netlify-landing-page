@@ -182,7 +182,7 @@ export default {
     })
     const blogList = []
     for (let i; i < blogPosts.length; i++) {
-      const blog = await require(`~/assets/content/blogList/${blogPosts[i]}.json`)
+      const blog = await require(`~/assets/content/blog/${blogPosts[i]}.json`)
       blogList.push(blog)
     }
     return { blogList }
