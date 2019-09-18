@@ -1,20 +1,14 @@
 <template>
   <header class="header-global">
-    <base-nav class="navbar-main" transparent type="" effect="light" expand>
+    <base-nav class="navbar-main" transparent type effect="light" expand>
       <nuxt-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-        <img
-          src="kodin-white.png"
-          alt="logo"
-          :style="{ width: '50px', height: '50px' }"
-        />
+        <img src="kodin-white.png" alt="logo" :style="{ width: '50px', height: '50px' }" />
       </nuxt-link>
 
       <div class="row" slot="content-header" slot-scope="{ closeMenu }">
         <div class="col-6 collapse-brand">
-          <a
-            href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
-          >
-            <img src="" />
+          <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
+            <img src />
           </a>
         </div>
         <div class="col-6 collapse-close">
@@ -24,13 +18,7 @@
 
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
         <base-dropdown tag="li" class="nav-item">
-          <a
-            slot="title"
-            href="#"
-            class="nav-link"
-            data-toggle="dropdown"
-            role="button"
-          >
+          <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
             <i class="fa fa-info-circle d-lg-none"></i>
             <span class="nav-link-inner--text">About KODIN</span>
           </a>
@@ -49,63 +37,43 @@
         </base-dropdown>
 
         <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
-          <a
-            slot="title"
-            href="#"
-            class="nav-link"
-            data-toggle="dropdown"
-            role="button"
-          >
+          <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
             <i class="fa fa-trophy d-lg-none"></i>
             <span class="nav-link-inner--text">Case studies</span>
           </a>
-          <div
-            class="dropdown-menu-inner"
-            v-for="blog in blogList"
-            :key="blog.title"
-          >
+          <div class="dropdown-menu-inner" v-for="study in caseStudyList" :key="study.title">
             {{ blog }}
-            <a
-              :href="`blog/${blog.title}`"
-              class="media d-flex align-items-center"
-            >
-              <div
-                class="icon icon-shape bg-gradient-primary rounded-circle text-white"
-              >
+            <a :href="`caseStudy/${study.title}`" class="media d-flex align-items-center">
+              <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                <i class="ni ni-spaceship"></i>
+              </div>
+              <div class="media-body ml-3">
+                <h6 class="heading text-primary mb-md-1">{{ study.title }}</h6>
+                <p class="description d-none d-md-inline-block mb-0">{{ study.description }}</p>
+              </div>
+            </a>
+          </div>
+        </base-dropdown>
+
+        <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
+          <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+            <i class="fa fa-trophy d-lg-none"></i>
+            <span class="nav-link-inner--text">Blog</span>
+          </a>
+          <div class="dropdown-menu-inner" v-for="blog in blogList" :key="blog.title">
+            <a :href="`blog/${blog.title}`" class="media d-flex align-items-center">
+              <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
                 <i class="ni ni-spaceship"></i>
               </div>
               <div class="media-body ml-3">
                 <h6 class="heading text-primary mb-md-1">{{ blog.title }}</h6>
-                <p class="description d-none d-md-inline-block mb-0">
-                  {{ blog.description }}
-                </p>
+                <p class="description d-none d-md-inline-block mb-0">{{ blog.description }}</p>
               </div>
             </a>
-            <!-- <a
-              href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
-              class="media d-flex align-items-center"
-            >
-              <div
-                class="icon icon-shape bg-gradient-warning rounded-circle text-white"
-              >
-                <i class="ni ni-ui-04"></i>
-              </div>
-              <div class="media-body ml-3">
-                <h5 class="heading text-warning mb-md-1">Components</h5>
-                <p class="description d-none d-md-inline-block mb-0">
-                  Learn how to use Argon compiling Scss, change brand colors and
-                  more.
-                </p>
-              </div>
-            </a> -->
           </div>
         </base-dropdown>
-
-        <a slot="title" href="#" class="nav-link">
-          <i class="fa fa-bookmark d-lg-none"></i>
-          <span class="nav-link-inner--text">Blog</span>
-        </a>
       </ul>
+
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
         <li class="nav-item">
           <a
@@ -170,22 +138,41 @@ export default {
     BaseDropdown
   },
   async asyncData({ params, payload }) {
-    const files = await require.context(
+    const blogFiles = await require.context(
       '~/assets/content/blog/',
       false,
       /\.json$/
     )
-    const blogPosts = files.keys().map((key) => {
-      const res = files(key)
+
+    const caseStudyFiles = await require.context(
+      '~/assets/content/caseStudy/',
+      false,
+      /\.json$/
+    )
+    const blogPosts = blogFiles.keys().map((key) => {
+      const res = blogFiles(key)
       res.slug = key.slice(2, -5)
       return res
     })
+
+    const caseStudies = caseStudyFiles.keys().map((key) => {
+      const res = caseStudyFiles(key)
+      res.slug = key.slice(2, -5)
+      return res
+    })
+
     const blogList = []
+    const caseStudyList = []
     for (let i; i < blogPosts.length; i++) {
       const blog = await require(`~/assets/content/blog/${blogPosts[i]}.json`)
       blogList.push(blog)
     }
-    return { blogList }
+
+    for (let i; i < caseStudies.length; i++) {
+      const caseStudy = await require(`~/assets/content/blog/${caseStudies[i]}.json`)
+      caseStudyList.push(caseStudy)
+    }
+    return { blogList, caseStudyList }
   },
   computed: {
     blogList() {
