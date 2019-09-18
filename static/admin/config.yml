@@ -9,6 +9,7 @@ collections:
   - name: 'blog'
     label: 'Blog'
     preview_path_date_field: 'updated_on'
+    format: 'json'
     folder: 'assets/content/blog'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -24,6 +25,7 @@ collections:
   - name: 'case study'
     preview_path_date_field: 'updated_on'
     label: 'Case study'
+    format: 'json'
     folder: 'assets/content/caseStudy'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
