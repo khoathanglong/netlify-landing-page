@@ -169,7 +169,7 @@ export default {
     }
 
     for (let i; i < caseStudies.length; i++) {
-      const caseStudy = await require(`~/assets/content/blog/${caseStudies[i]}.json`)
+      const caseStudy = await require(`~/assets/content/caseStudy/${caseStudies[i]}.json`)
       caseStudyList.push(caseStudy)
     }
     return { blogList, caseStudyList }
