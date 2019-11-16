@@ -2,14 +2,16 @@
   <header class="header-global">
     <base-nav class="navbar-main" transparent type effect="light" expand>
       <nuxt-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-        <img src="kodin-white.png" alt="logo" :style="{ width: '50px', height: '50px' }" />
+        <img
+          src="kodin-white.png"
+          alt="logo"
+          :style="{ width: '50px', height: '50px' }"
+        />
       </nuxt-link>
 
       <div class="row" slot="content-header" slot-scope="{ closeMenu }">
         <div class="col-6 collapse-brand">
-          <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
-            <img src />
-          </a>
+          <img src="kodin.png" style="display: inline-block;" />
         </div>
         <div class="col-6 collapse-close">
           <close-button @click="closeMenu"></close-button>
@@ -18,7 +20,13 @@
 
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
         <base-dropdown tag="li" class="nav-item">
-          <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+          <a
+            slot="title"
+            href="#"
+            class="nav-link"
+            data-toggle="dropdown"
+            role="button"
+          >
             <i class="fa fa-info-circle d-lg-none"></i>
             <span class="nav-link-inner--text">About KODIN</span>
           </a>
@@ -26,52 +34,55 @@
             <i class="ni ni-bulb-61"></i>
             Solutions
           </a>
-          <a href="#team" class="dropdown-item">
+          <!-- <a href="#team" class="dropdown-item">
             <i class="fa fa-users"></i>
             Team
-          </a>
+          </a> -->
           <a href="#contact" class="dropdown-item">
             <i class="fa fa-envelope"></i>
             Contact
           </a>
         </base-dropdown>
 
-        <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
-          <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
-            <i class="fa fa-trophy d-lg-none"></i>
-            <span class="nav-link-inner--text">Case studies</span>
-          </a>
-          <div class="dropdown-menu-inner" v-for="study in caseStudyList" :key="study.title">
-            {{ blog }}
-            <a :href="`caseStudy/${study.title}`" class="media d-flex align-items-center">
-              <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                <i class="ni ni-spaceship"></i>
-              </div>
-              <div class="media-body ml-3">
-                <h6 class="heading text-primary mb-md-1">{{ study.title }}</h6>
-                <p class="description d-none d-md-inline-block mb-0">{{ study.description }}</p>
-              </div>
-            </a>
-          </div>
-        </base-dropdown>
+        <a href="#case-studies" class="nav-link">
+          <i class="fa fa-trophy d-lg-none"></i>
+          <span class="nav-link-inner--text">Case studies</span>
+        </a>
 
-        <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
-          <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
-            <i class="fa fa-trophy d-lg-none"></i>
-            <span class="nav-link-inner--text">Blog</span>
-          </a>
-          <div class="dropdown-menu-inner" v-for="blog in blogList" :key="blog.title">
-            <a :href="`blog/${blog.title}`" class="media d-flex align-items-center">
-              <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+        <!-- <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl"> -->
+        <!-- <a
+          slot="title"
+          href="#"
+          class="nav-link"
+          data-toggle="dropdown"
+          role="button"
+        >
+          <i class="fa fa-trophy d-lg-none"></i>
+          <span class="nav-link-inner--text">Blog</span>
+        </a> -->
+        <!-- <div
+            class="dropdown-menu-inner"
+            v-for="blog in blogList"
+            :key="blog.title"
+          >
+            <a
+              :href="`blog/${blog.title}`"
+              class="media d-flex align-items-center"
+            >
+              <div
+                class="icon icon-shape bg-gradient-primary rounded-circle text-white"
+              >
                 <i class="ni ni-spaceship"></i>
               </div>
               <div class="media-body ml-3">
                 <h6 class="heading text-primary mb-md-1">{{ blog.title }}</h6>
-                <p class="description d-none d-md-inline-block mb-0">{{ blog.description }}</p>
+                <p class="description d-none d-md-inline-block mb-0">
+                  {{ blog.description }}
+                </p>
               </div>
             </a>
-          </div>
-        </base-dropdown>
+          </div> -->
+        <!-- </base-dropdown> -->
       </ul>
 
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
@@ -173,7 +184,7 @@ export default {
       caseStudyList.push(caseStudy)
     }
     return { blogList, caseStudyList }
-  },
+  }
 }
 </script>
 <style></style>

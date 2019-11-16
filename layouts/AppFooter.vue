@@ -13,7 +13,7 @@
             <a href="http://www.freepik.com" target="_blank">Freepik</a>
           </div>
         </div>
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
           <ul class="nav nav-footer justify-content-end">
             <li class="nav-item">
               <nuxt-link to="/" class="nav-link" rel="noopener"
@@ -26,7 +26,7 @@
               >
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
