@@ -1,5 +1,5 @@
 <template>
-  <div class="position-relative">
+  <div class="position-relative intro">
     <!-- shape Hero -->
     <section class="section-shaped my-0">
       <div class="shape shape-style-1 shape-default shape-skew">
@@ -51,7 +51,7 @@
               <img
                 src="img/software-development.png"
                 class="img-fluid"
-                alt=""
+                alt="software development"
                 style="max-height: 380px;"
               />
             </div>
@@ -67,4 +67,16 @@
 export default {}
 </script>
 
-<style></style>
+<style lang="scss">
+@media screen and (max-width: 991px) {
+  .intro {
+    .container {
+      padding-bottom: 10rem !important;
+
+      .img-fluid {
+        margin-top: 5rem;
+      }
+    }
+  }
+}
+</style>

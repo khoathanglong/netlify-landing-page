@@ -1,5 +1,5 @@
 <template>
-  <section class="section section section-shaped my-0 overflow-hidden">
+  <section class="section section section-shaped my-0 overflow-hidden mvp">
     <div class="shape shape-style-1 bg-gradient-warning shape-skew">
       <span></span>
       <span></span>
@@ -93,4 +93,10 @@
 export default {}
 </script>
 
-<style></style>
+<style lang="scss">
+@media screen and (max-width: 991px) {
+  .mvp img {
+    max-height: 300px;
+  }
+}
+</style>
