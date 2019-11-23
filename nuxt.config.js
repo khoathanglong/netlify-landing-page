@@ -28,9 +28,10 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    `~/plugins/argon-kit.js`
+    `~/plugins/argon-kit.js`,
     // `~/plugins/globalComponents.js`
-    // `~/plugins/globalDirectives.js`
+    // `~/plugins/globalDirectives.js`,
+    { src: '~/plugins/tawkto', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
