@@ -15,12 +15,9 @@
               shadow
               rounded
             ></icon>
-            <h3>Web Applications</h3>
+            <h3>{{ lang.title }}</h3>
             <p>
-              We make sure your end-users enjoy unique and delightful experience
-              digging through your websites and/or web applications. Our
-              solutions tailor to your business requirements, and not limited
-              to:
+              {{ lang.description }}
             </p>
             <ul class="list-unstyled mt-5">
               <li class="py-2">
@@ -31,7 +28,7 @@
                     class="mr-3"
                     icon="fa fa-cogs"
                   ></badge>
-                  <h6 class="mb-0">Custom web applications</h6>
+                  <h6 class="mb-0">{{ lang.customWebApps }}</h6>
                 </div>
               </li>
               <li class="py-2">
@@ -42,7 +39,7 @@
                     class="mr-3"
                     icon="fa fa-window-restore"
                   ></badge>
-                  <h6 class="mb-0">Landing page</h6>
+                  <h6 class="mb-0">{{ lang.landingPage }}</h6>
                 </div>
               </li>
               <li class="py-2">
@@ -53,7 +50,7 @@
                     class="mr-3"
                     icon="fa fa-shopping-cart"
                   ></badge>
-                  <h6 class="mb-0">E-commerce websites</h6>
+                  <h6 class="mb-0">{{ lang.eCommerce }}</h6>
                 </div>
               </li>
               <li class="py-2">
@@ -64,7 +61,7 @@
                     class="mr-3"
                     icon="fa fa-edit"
                   ></badge>
-                  <h6 class="mb-0">Content Management System (CMS)</h6>
+                  <h6 class="mb-0">{{ lang.cms }}</h6>
                 </div>
               </li>
             </ul>
@@ -74,7 +71,7 @@
               type="primary"
               class="mt-4"
             >
-              See case study
+              {{ lang.seeCaseStudy }}
             </base-button>
           </div>
         </div>
@@ -84,7 +81,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    lang() {
+      return this.$t('WebApps')
+    }
+  }
+}
 </script>
 
 <style></style>

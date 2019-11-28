@@ -32,14 +32,12 @@
               ></icon>
             </div>
             <div class="pl-4">
-              <h3 class="text-white">MVP Development</h3>
+              <h3 class="text-white">{{ lang.title }}</h3>
               <p class="text-white">
-                Have a brilliant idea but don't know where to start? We got you
-                covered! Our MVP Development solution will assist you through
-                the whole product initiation process.
+                {{ lang.description }}
               </p>
               <base-button tag="a" href="#case-studies" class="mt-4">
-                See case study
+                {{ lang.seeCaseStudy }}
               </base-button>
             </div>
           </div>
@@ -55,10 +53,9 @@
                 ></icon>
               </div>
               <div class="pl-4">
-                <h5 class="title text-warning">Prototypes</h5>
+                <h5 class="title text-warning">{{ lang.prototypes.title }}</h5>
                 <p>
-                  Building up from your input and ideas, we craft out clickable
-                  prototypes and eye-catching UI designs for the application.
+                  {{ lang.prototypes.description }}
                 </p>
               </div>
             </div>
@@ -75,10 +72,9 @@
                 ></icon>
               </div>
               <div class="pl-4">
-                <h5 class="title text-warning">Minimum Viable Products</h5>
+                <h5 class="title text-warning">{{ lang.mvp.title }}</h5>
                 <p>
-                  We won't stop until you are equipped with an MVP to prove your
-                  ideas to potential investors and users.
+                  {{ lang.mvp.description }}
                 </p>
               </div>
             </div>
@@ -90,7 +86,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    lang() {
+      return this.$t('MVP')
+    }
+  }
+}
 </script>
 
 <style lang="scss">

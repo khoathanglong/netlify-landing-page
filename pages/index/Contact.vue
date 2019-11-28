@@ -4,11 +4,11 @@
       <div class="row justify-content-center mt--300">
         <div class="col-lg-8 text-center">
           <card gradient="secondary" shadow body-classes="p-lg-5">
-            <h4 class="mb-1">Like what you see?</h4>
+            <h4 class="mb-1">{{ lang.title }}</h4>
             <p class="mt-0">
-              Drop us an email to
-              <a href="mailto:example@email.com">example@emai.com</a> about your
-              challenges and we will reply within 24 hours.
+              {{ lang.beforeEmail }}
+              <a href="mailto:example@email.com">example@emai.com</a>
+              {{ lang.afterEmail }}
             </p>
             <img src="img/contact.png" class="img-fluid" alt="" />
             <!-- <base-input
@@ -44,7 +44,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    lang() {
+      return this.$t('Contact')
+    }
+  }
+}
 </script>
 
 <style></style>

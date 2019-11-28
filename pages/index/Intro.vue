@@ -19,12 +19,11 @@
           <div class="row align-items-center">
             <div class="col-lg-6">
               <h1 class="display-3 text-white">
-                Solving business challenges
-                <span>with modern technology</span>
+                {{ lang.h1.bold }}
+                <span>{{ lang.h1.normal }}</span>
               </h1>
               <p class="lead text-white">
-                KODIN helps boost business ideas by developing technological
-                solutions for enterprises' needs.
+                {{ lang.subheading }}
               </p>
               <div class="btn-wrapper">
                 <base-button
@@ -34,7 +33,7 @@
                   type="warning"
                   icon="fa fa-envelope"
                 >
-                  Contact us
+                  {{ lang.contactUs }}
                 </base-button>
                 <base-button
                   tag="a"
@@ -43,7 +42,7 @@
                   type="white"
                   icon="ni ni-bulb-61"
                 >
-                  Our solutions
+                  {{ lang.ourSolutions }}
                 </base-button>
               </div>
             </div>
@@ -64,7 +63,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    lang() {
+      return this.$t('Intro')
+    }
+  }
+}
 </script>
 
 <style lang="scss">

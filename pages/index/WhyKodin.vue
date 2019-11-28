@@ -9,7 +9,7 @@
     <div class="container pt-lg pb-300">
       <div class="row text-center justify-content-center">
         <div class="col-lg-10">
-          <h2 class="display-3 text-white">Why KODIN?</h2>
+          <h2 class="display-3 text-white">{{ lang.title }}</h2>
           <!-- <p class="lead text-white">
               According to the National Oceanic and Atmospheric Administration,
               Ted, Scambos, NSIDClead scentist, puts the potentially record low
@@ -27,10 +27,9 @@
             round
             color="default"
           ></icon>
-          <h5 class="text-white mt-3">Modern technology</h5>
+          <h5 class="text-white mt-3">{{ lang.modernTech.title }}</h5>
           <p class="text-white mt-3">
-            We always update with the most stable and popular technology to
-            deliver maintainable products.
+            {{ lang.modernTech.description }}
           </p>
         </div>
         <div class="col-lg-4">
@@ -42,10 +41,9 @@
             round
             color="default"
           ></icon>
-          <h5 class="text-white mt-3">Tailor-made solutions</h5>
+          <h5 class="text-white mt-3">{{ lang.tailorMade.title }}</h5>
           <p class="text-white mt-3">
-            Not all applications look and function the same way. We take into
-            account your specific requirements.
+            {{ lang.tailorMade.description }}
           </p>
         </div>
         <div class="col-lg-4">
@@ -57,11 +55,9 @@
             round
             color="default"
           ></icon>
-          <h5 class="text-white mt-3">On-site support</h5>
+          <h5 class="text-white mt-3">{{ lang.onSiteSupport.title }}</h5>
           <p class="text-white mt-3">
-            We don't believe in long-distance relationships. That's why being
-            physically present at your premises during development is a priority
-            to us.
+            {{ lang.onSiteSupport.description }}
           </p>
         </div>
       </div>
@@ -70,7 +66,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    lang() {
+      return this.$t('WhyKodin')
+    }
+  }
+}
 </script>
 
 <style></style>

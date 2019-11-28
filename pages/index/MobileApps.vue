@@ -21,12 +21,9 @@
               rounded
             ></icon>
 
-            <h3 class="text-success">Mobile Applications</h3>
+            <h3 class="text-success">{{ lang.title }}</h3>
             <p>
-              Having a modern, user-friendly mobile application is the key to
-              your business growth. With our experience in creating
-              cross-platform and native mobile apps, we can help you reach more
-              users and customers all over the world.
+              {{ lang.description }}
             </p>
             <base-button
               tag="a"
@@ -34,7 +31,7 @@
               type="success"
               class="mt-4"
             >
-              See case study
+              {{ lang.seeCaseStudy }}
             </base-button>
           </div>
         </div>
@@ -44,7 +41,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    lang() {
+      return this.$t('MobileApps')
+    }
+  }
+}
 </script>
 
 <style></style>

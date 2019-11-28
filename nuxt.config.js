@@ -49,7 +49,29 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            name: 'Nederlands',
+            code: 'nl',
+            iso: 'nl-NL',
+            file: 'nl'
+          },
+          {
+            name: 'English',
+            code: 'en',
+            iso: 'en-US',
+            file: 'en'
+          }
+        ],
+        langDir: 'lang/',
+        defaultLocale: 'en',
+        lazy: true
+      }
+    ]
   ],
   markdownit: {
     injected: true
