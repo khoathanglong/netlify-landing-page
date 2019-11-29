@@ -9,13 +9,30 @@
             KODIN
           </div>
           <div class="credits">
-            Illustrations by
+            {{ lang.illustrationsBy }}
             <a href="http://www.freepik.com" target="_blank">Freepik</a>
           </div>
         </div>
-        <!-- <div class="col-md-6">
+        <div class="col-md-6">
           <ul class="nav nav-footer justify-content-end">
-            <li class="nav-item">
+            <base-dropdown
+              :title="lang.language"
+              direction="up"
+              position="right"
+              icon="fa fa-globe"
+            >
+              <li>
+                <nuxt-link :to="switchLocalePath('en')">{{
+                  lang.english
+                }}</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link :to="switchLocalePath('nl')">
+                  {{ lang.dutch }}
+                </nuxt-link>
+              </li>
+            </base-dropdown>
+            <!-- <li class="nav-item">
               <nuxt-link to="/" class="nav-link" rel="noopener"
                 >About Us</nuxt-link
               >
@@ -24,9 +41,9 @@
               <nuxt-link to="/blog" class="nav-link" rel="noopener"
                 >Blog</nuxt-link
               >
-            </li>
+            </li> -->
           </ul>
-        </div> -->
+        </div>
       </div>
     </div>
   </footer>
@@ -38,7 +55,20 @@ export default {
     return {
       year: new Date().getFullYear()
     }
+  },
+  computed: {
+    lang() {
+      return this.$t('AppFooter')
+    }
   }
 }
 </script>
-<style></style>
+<style lang="scss">
+.footer {
+  .dropdown-menu {
+    padding: 8px;
+    font-size: 0.8em;
+    line-height: 1.8em;
+  }
+}
+</style>

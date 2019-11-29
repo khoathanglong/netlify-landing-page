@@ -4,8 +4,10 @@ import Intro from './Intro'
 import MobileApps from './MobileApps'
 import MVP from './MVP'
 import Solutions from './Solutions'
-import WepApps from './WepApps'
+import WebApps from './WebApps'
 import WhyKodin from './WhyKodin'
+import AppFooter from './AppFooter'
+import AppHeader from './AppHeader'
 
 export default {
   CaseStudies,
@@ -14,6 +16,8 @@ export default {
   MobileApps,
   MVP,
   Solutions,
-  WepApps,
-  WhyKodin
+  WebApps,
+  WhyKodin,
+  AppFooter,
+  AppHeader
 }

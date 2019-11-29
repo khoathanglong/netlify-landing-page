@@ -28,11 +28,11 @@
             role="button"
           >
             <i class="fa fa-info-circle d-lg-none"></i>
-            <span class="nav-link-inner--text">About KODIN</span>
+            <span class="nav-link-inner--text">{{ lang.aboutKodin }}</span>
           </a>
           <a href="#solutions" class="dropdown-item">
             <i class="ni ni-bulb-61"></i>
-            Solutions
+            {{ lang.solutions }}
           </a>
           <!-- <a href="#team" class="dropdown-item">
             <i class="fa fa-users"></i>
@@ -40,13 +40,13 @@
           </a> -->
           <a href="#contact" class="dropdown-item">
             <i class="fa fa-envelope"></i>
-            Contact
+            {{ lang.contact }}
           </a>
         </base-dropdown>
 
         <a href="#case-studies" class="nav-link">
           <i class="fa fa-trophy d-lg-none"></i>
-          <span class="nav-link-inner--text">Case studies</span>
+          <span class="nav-link-inner--text">{{ lang.caseStudies }}</span>
         </a>
 
         <!-- <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl"> -->
@@ -130,7 +130,7 @@
             <span class="btn-inner--icon">
               <i class="fa fa-envelope mr-2"></i>
             </span>
-            <span class="nav-link-inner--text">Contact us</span>
+            <span class="nav-link-inner--text">{{ lang.contactUs }}</span>
           </a>
         </li>
       </ul>
@@ -184,6 +184,12 @@ export default {
       caseStudyList.push(caseStudy)
     }
     return { blogList, caseStudyList }
+  },
+
+  computed: {
+    lang() {
+      return this.$t('AppHeader')
+    }
   }
 }
 </script>
