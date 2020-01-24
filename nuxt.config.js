@@ -31,7 +31,8 @@ module.exports = {
     `~/plugins/argon-kit.js`,
     // `~/plugins/globalComponents.js`
     // `~/plugins/globalDirectives.js`,
-    { src: '~/plugins/tawkto', ssr: false }
+    { src: '~/plugins/tawkto', ssr: false },
+    { src: '~/plugins/googleAnalytics', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules

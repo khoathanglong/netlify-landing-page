@@ -4,7 +4,7 @@ export default {
     normal: 'with modern technology'
   },
   subheading:
-    "KODIN helps boost business ideas by developing technologicalsolutions for enterprises' needs.",
+    "KODIN helps boost business ideas by developing technological solutions for enterprises' needs.",
   contactUs: 'Contact us',
   ourSolutions: 'Our solutions'
 }
