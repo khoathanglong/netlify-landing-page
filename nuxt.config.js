@@ -32,6 +32,7 @@ module.exports = {
     // `~/plugins/globalComponents.js`
     // `~/plugins/globalDirectives.js`,
     { src: '~/plugins/tawkto', ssr: false },
+    { src: '~/plugins/typeform', ssr: false },
     { src: '~/plugins/googleAnalytics', mode: 'client' }
   ],
   /*

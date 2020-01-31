@@ -22,14 +22,12 @@
               icon="fa fa-globe"
             >
               <li>
-                <nuxt-link :to="switchLocalePath('en')">{{
-                  lang.english
-                }}</nuxt-link>
+                <a href="https://kodin.tech/">{{ lang.english }}</a>
               </li>
               <li>
-                <nuxt-link :to="switchLocalePath('nl')">
+                <a href="https://kodin.tech/nl/">
                   {{ lang.dutch }}
-                </nuxt-link>
+                </a>
               </li>
             </base-dropdown>
             <!-- <li class="nav-item">
