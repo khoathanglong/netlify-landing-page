@@ -89,7 +89,7 @@
         <li class="nav-item">
           <a
             class="nav-link nav-link-icon"
-            href="https://www.facebook.com/kodin.solutions"
+            href="https://www.facebook.com/kodin.tech"
             target="_blank"
             rel="noopener"
             data-toggle="tooltip"
@@ -102,7 +102,7 @@
         <li class="nav-item">
           <a
             class="nav-link nav-link-icon"
-            href="https://www.linkedin.com/company/kodin-solutions"
+            href="https://www.linkedin.com/company/kodin-tech"
             target="_blank"
             rel="noopener"
             data-toggle="tooltip"
@@ -115,7 +115,7 @@
         <li class="nav-item">
           <a
             class="nav-link nav-link-icon"
-            href="https://twitter.com/kodin_solutions"
+            href="https://twitter.com/kodin_tech"
             target="_blank"
             rel="noopener"
             data-toggle="tooltip"
