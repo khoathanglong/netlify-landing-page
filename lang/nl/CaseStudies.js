@@ -3,5 +3,7 @@ export default {
   subheading: 'A working product is worth more than a thousand words.',
   gCheckin: 'GCheckin - an event ticket addon',
   dataVisualization: 'Data Visualization project',
-  spaLandingPage: "Babe &amp; Beau Spa's landing page"
+  spaLandingPage: "Babe and Beau Spa's landing page",
+  ruiskumestari: "Ruiskumestari's landing page",
+  tamsuchungcu: 'Anonymous apartment review forum'
 }

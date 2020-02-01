@@ -36,6 +36,40 @@
         </div>
       </div>
       <div class="row mt-5">
+        <div class="col-md-6 mb-5 mb-md-0">
+          <div class="card card-lift--hover shadow border-0">
+            <a
+              href="https://www.ruiskumestari.fi/"
+              target="_blank"
+              :title="lang.ruiskumestari"
+            >
+              <img
+                :alt="lang.ruiskumestari"
+                src="img/ruiskumestari.png"
+                class="card-img"
+              />
+            </a>
+            <p class="mt-3">{{ lang.ruiskumestari }}</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-5 mb-md-0">
+          <div class="card card-lift--hover shadow border-0">
+            <a
+              href="https://www.tamsuchungcu.com/"
+              target="_blank"
+              :title="lang.tamsuchungcu"
+            >
+              <img
+                :alt="lang.tamsuchungcu"
+                src="img/tamsuchungcu.png"
+                class="card-img"
+              />
+            </a>
+            <p class="mt-3">{{ lang.tamsuchungcu }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
         <div class="col-md-4 mb-5 mb-md-0">
           <div class="card card-lift--hover shadow border-0">
             <a
