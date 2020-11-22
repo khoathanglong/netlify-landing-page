@@ -20,9 +20,10 @@ module.exports = {
     'nuxt/no-cjs-in-config': 'off',
     'vue/attributes-order': 'off',
     'vue/name-property-casin': 'off',
-    'vue/return-in-computed-property': 'off',
     'vue/require-default-prop': 'off',
     'vue/name-property-casing': 'off',
-    'vue/order-in-components': 'off'
+    'vue/order-in-components': 'off',
+    'vue/comment-directive': 'off',
+    'vue/require-component-is':'off'
   }
 }
